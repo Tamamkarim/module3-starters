@@ -92,4 +92,42 @@ const picArray = [
   },
 ];
 
-// add your code here
+// Function to populate the <section> with articles
+function populateArticles() {
+  const picturesSection = document.getElementById('pictures'); 
+
+  picArray.forEach((pic) => {
+    
+    const article = document.createElement('article');
+    article.classList.add('card');
+
+   
+    const heading = document.createElement('h2');
+    heading.textContent = pic.title;
+    article.appendChild(heading);
+
+    
+    const figure = document.createElement('figure');
+
+    const img = document.createElement('img');
+    img.src = pic.image.medium;
+    img.alt = pic.title; 
+    figure.appendChild(img);
+
+    const figcaption = document.createElement('figcaption');
+    figcaption.textContent = pic.caption;
+    figure.appendChild(figcaption);
+
+    article.appendChild(figure);
+
+  
+    const paragraph = document.createElement('p');
+    paragraph.textContent = pic.description; 
+    article.appendChild(paragraph);
+
+   
+    picturesSection.appendChild(article);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', populateArticles);

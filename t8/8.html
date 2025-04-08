@@ -3,27 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 8</title>
+    <title>Simple Calculator</title>
     <script src="8.js" defer></script>
 </head>
 
 <body>
-    <h1>Task 8</h1>
-    <input id="num1" type="text" placeholder="enter first integer">
+    <h1>Simple Calculator</h1>
+    <input id="num1" type="number" placeholder="Enter first number">
     <br>
-    <input id="num2" type="text" placeholder="enter second integer">
+    <input id="num2" type="number" placeholder="Enter second number">
     <br>
-    <select id="operation">
-        <option value="add">addition</option>
-        <option value="sub">subtraction</option>
-        <option value="multi">multiplication</option>
-        <option value="div">division</option>
+    <select id="operator">
+        <option value="add">Addition</option>
+        <option value="subtract">Subtraction</option>
+        <option value="multiply">Multiplication</option>
+        <option value="divide">Division</option>
     </select>
     <br>
-    <button id="start">Calculate</button>
-    <p id="result"></p>
+    <button id="calculate">Calculate</button>
+    <p id="result">Result: </p>
 </body>
 
 </html>
